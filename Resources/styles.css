@@ -75,17 +75,18 @@
     right: 0px;
 }
 
-/* Progress Graph Section */
+/* Graph Section */
 
-#ProgressGraphSection {
+#GraphSection {
     background-color: #2d2e3b;
     position: absolute;
     width: 100%;
     top: 620px;
     right: 0px;
     height: 1000px;
-    letter-spacing: 2px;
 }
+
+/* Progress Graph Section */
 
 .progress-content{
     position: relative;
