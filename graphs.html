@@ -30,158 +30,228 @@
     <section id="GraphSection">
       <div class="progress-content">
         <h1>Progress Graph</h1>
-        <p>Progress graph shows a complete history of all your logged workouts</p>
+        <p>Progress graph shows a complete history of all your logged workouts!</p>
       </div>
       <div class="progressContainer">
-        <canvas id="myChart"></canvas>
-
+        <canvas id="LineChart"></canvas>
         <script>
-        var date = ["January", "February", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"];
-        
-        /* Squats */
-        var frontSquat = [];
-        var backSquat = [195, 205, 215, 215, 225, 235, 260, 270, 275, 275, 275, 280];
-        
-        /* Floor Pull*/
-        var deadlift = [195, 215, 225, 235, 245, 255, 270, 280, 295, 305, 315, 325];
-        var sumoDeadlift = [];
-        var powerClean = [];
 
-        /* Horizontal Press */
-        var benchPress = [95, 105, 115, 115, 125, 135, 160, 170, 175, 175, 175, 180];
-        var inclineBenchPress =[];
-        var dip = [];
-
-        /* Vertical Press */
-        var overheadPress = [30, 30, 35, 40, 45, 45, 55, 60, 65, 70, 75, 80];
-        var pushPress = [];
-        var snatch = [];
-
-        /* Pull up / Row */
-        var chinUp = [3, 4, 4, 5, 9, 10, 10, 11, 12, 14, 15, 15];
-        var pullUp = [];
-        var pendlayRow = [];
-
-
-        
-        const progressGraph = document.getElementById('myChart').getContext('2d');
-  
-        
-        const chart = new Chart(progressGraph, {
-          type: "line",
-          data: {
-            labels: date,
+          /*creating dummy data to be used in progress graph*/
+          var date = ["January", "February", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"];
             
-            datasets: 
-            [{ 
-            /* Squats */
+          /* Squats */
+          var frontSquat = [];
+          var backSquat = [195, 205, 215, 215, 225, 235, 260, 270, 275, 275, 275, 280];
+          
+          /* Floor Pull*/
+          var deadlift = [195, 215, 225, 235, 245, 255, 270, 280, 295, 305, 315, 325];
+          var sumoDeadlift = [];
+          var powerClean = [];
+
+          /* Horizontal Press */
+          var benchPress = [95, 105, 115, 115, 125, 135, 160, 170, 175, 175, 175, 180];
+          var inclineBenchPress =[];
+          var dip = [];
+
+          /* Vertical Press */
+          var overheadPress = [30, 30, 35, 40, 45, 45, 55, 60, 65, 70, 75, 80];
+          var pushPress = [];
+          var snatch = [];
+
+          /* Pull up / Row */
+          var chinUp = [3, 4, 4, 5, 9, 10, 10, 11, 12, 14, 15, 15];
+          var pullUp = [];
+          var pendlayRow = [];
+
+          /* Entering info for data */
+          const data = {
+              labels: date,
+              datasets: 
+              [{ 
+              /* Squats */
               label:"Front Squat",
               data: frontSquat,
               borderColor: "#D0312D",
               fill: false,
-            }, { 
+              }, { 
               label: "Back Squat",
               data: backSquat,
               borderColor: "#990F02",
               fill: false
-            }, 
-            /* Floor Pull*/
-            { 
+              }, 
+              /* Floor Pull*/
+              { 
               label: "Deadlift",
               data: deadlift,
               borderColor: "#006ee6",
               fill: false
-            }, {
-                label: "Sumo Deadlift",
-                data: sumoDeadlift,
-                borderColor:"#0062cc",
-                fill: false
-            }, {
-                label: "Power Clean",
-                data: powerClean,
-                borderColor: "#0055b3",
-                fill: false
-            },
-            /* Horizontal Press */
-            {
-                label: "Bench Press",
-                data: benchPress,
-                borderColor: "#770087",
-                fill: false
-            }, {
-                label: "Incline Bench Press",
-                data: inclineBenchPress,
-                borderColor: "#9600b3",
-                fill: false
-            }, {
-                label: "Dip",
-                data: dip,
-                borderColor: "#AA00d7",
-                fill: false
-            },
-            /* Vertical Press */
-            {
-                label: "Overhead Press",
-                data: overheadPress,
-                borderColor: "#357a38",
-                fill: false
-            }, {
-                label: "Push Press",
-                data: pushPress,
-                borderColor: "#2e6930",
-                fill: false
-            }, {
-                label: "Snatch",
-                data: snatch,
-                borderColor: "#265828",
-                fill: false
-            }, 
-            /* Pull up / Row */
-            {
-                label: "Chin Up",
-                data: chinUp,
-                borderColor: "#e47200",
-                fill: false
-            }, {
-                label: "Pull Up",
-                data: pullUp,
-                borderColor: "#e69b00",
-                fill: false
-            }, {
-                label: "Pendlay Row",
-                data: pendlayRow,
-                borderColor: "#e6cc00",
-                fill: false
-            }]
-          },
-          options:{
-            plugins: {
-                //this is how you make changes to legend
-                legend: {
-                    position: 'right',
-                    labels: {
-                        color: "white",
-                        
+              }, {
+                  label: "Sumo Deadlift",
+                  data: sumoDeadlift,
+                  borderColor:"#0062cc",
+                  fill: false
+              }, {
+                  label: "Power Clean",
+                  data: powerClean,
+                  borderColor: "#0055b3",
+                  fill: false
+              },
+              /* Horizontal Press */
+              {
+                  label: "Bench Press",
+                  data: benchPress,
+                  borderColor: "#770087",
+                  fill: false
+              }, {
+                  label: "Incline Bench Press",
+                  data: inclineBenchPress,
+                  borderColor: "#9600b3",
+                  fill: false
+              }, {
+                  label: "Dip",
+                  data: dip,
+                  borderColor: "#AA00d7",
+                  fill: false
+              },
+              /* Vertical Press */
+              {
+                  label: "Overhead Press",
+                  data: overheadPress,
+                  borderColor: "#357a38",
+                  fill: false
+              }, {
+                  label: "Push Press",
+                  data: pushPress,
+                  borderColor: "#2e6930",
+                  fill: false
+              }, {
+                  label: "Snatch",
+                  data: snatch,
+                  borderColor: "#265828",
+                  fill: false
+              }, 
+              /* Pull up / Row */
+              {
+                  label: "Chin Up",
+                  data: chinUp,
+                  borderColor: "#e47200",
+                  fill: false
+              }, {
+                  label: "Pull Up",
+                  data: pullUp,
+                  borderColor: "#e69b00",
+                  fill: false
+              }, {
+                  label: "Pendlay Row",
+                  data: pendlayRow,
+                  borderColor: "#e6cc00",
+                  fill: false
+              }]
+            };
+
+            //config settings for line chart
+            const config = {
+                type: 'line',
+                data: data,
+                options:{
+                    plugins: {
+                        //this is how you make changes to legend
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: "white",
+                            }
+                        }
+                    },
+                responsive: true,
+                //this is how you make changes to the x and y axis
+                scales: {
+                    y: {
+                        ticks: {color: 'white', beginAtZero: true}
+                    },
+                    x: {
+                        ticks: {color: 'white', beginAtZero: true}
                     }
-                }
-            },
-      
-            responsive: true,
-            //this is how you make changes to the x and y axis
-            scales: {
-                y: {
-                    ticks: {color: 'white', beginAtZero: true}
                 },
-                x: {
-                    ticks: {color: 'white', beginAtZero: true}
-                }
-            },
-          }
+            }
+          };
 
-        });
-        </script>
-
+          // this is how you create the line chart
+          const progressGraph = new Chart(document.getElementById('LineChart'),config);
+      </script>
       </div>
+      <br><br>
+      <div class="strengthvsaverage-content">
+        <h1>Strength vs Average</h1>
+        <p>Strength vs Average graph shows your workouts compared to the national average!</p>
+      </div>
+      <div class="strengthvsaverage-container">
+        <canvas id="BarChart"></canvas>
+        <script>
+          //created dummy data to use in the datasets
+          var maxBench = 200;
+          var avgBench = 180;
+          var maxSquat = 260;
+          var avgSquat = 250;
+
+
+          // creatting datasets to be used in workoutData
+          var yourWorkOut = {
+              label: 'Your Workout',
+              data:[maxBench,maxSquat],
+              backgroundColor:['#D0312D', "#990F02"],
+              borderColor:['#ffffff','#ffffff'],
+              borderWidth: 1
+          };
+
+          var aveWorkOut = {
+              label: 'Avg Workout',
+              data:[avgBench,avgSquat],
+              backgroundColor:['#770087', "#9600b3"],
+              borderColor:['#ffffff','#ffffff'],
+              borderWidth: 1
+          };
+
+          // creating the data that will be used in barGraphconfig
+          var workoutData = {
+              labels: ["Bench Press", "Back Squat"],
+              datasets: [yourWorkOut, aveWorkOut]
+          };
+
+          // creating config settings for bar graph that will be used in strVsAvgChart
+          const barGraphConfig = {
+              type: 'bar',
+              data: workoutData,
+              options: {
+                  interaction: {
+                    mode: 'index'
+                  },
+                  plugins: {
+                      legend: {
+                          position: 'right',
+                          labels: {
+                              color: '#ffffff'
+                          }
+                      }
+                  },
+                  scales: {
+                      y: {
+                          ticks: {color: '#ffffff', beginAtZero: true}
+                          },
+                      x: {
+                          ticks: {color: '#ffffff', beginAtZero: true}
+                      }
+                  }
+              }
+          };
+
+
+          const strVsAvgChart = new Chart(document.getElementById('BarChart'),barGraphConfig);
+        </script>
+      </div>
+
+
+    
 
     </section>
   </body>
