@@ -83,7 +83,7 @@
     width: 100%;
     top: 620px;
     right: 0px;
-    height: 1500px;
+    height: 1700px;
 }
 
 /* Progress Graph Section */
@@ -140,3 +140,97 @@
     width: 50%;
 
 }
+
+/* Strength Score Graph Section */
+
+.strengthscore-content{
+    position: relative;
+    top: 50px;
+    font-family: "Figtree";
+    font-weight: bold;
+    color: #5bacff;
+    text-align: center;
+}
+
+.strengthscore-container{
+    background-color: #ffffff;
+    width: 600px;
+    height: 300px;
+    position: relative;
+    top: 50px;
+    border-radius: 30px;
+    left: 325px;
+}
+
+.bluecircle{
+    background-color: #5bacff;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    top: 45px;
+    left: 50px;
+}
+
+.bluecircle var{
+    font-family: "Figtree";
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 90px;
+    position: relative;
+    left: 20%;
+    top: 23%;
+    font-style: normal;
+    letter-spacing: 5px;
+}
+
+.workoutGroups{
+    font-family: "Figtree";
+    font-weight: bold;
+    position: relative;
+    bottom: 175px;
+    left:50%;
+}
+
+.workoutGroups li{
+    list-style: none;
+    letter-spacing: 2px;
+}
+
+.totalScore{
+    font-size: 20px;
+}
+
+.tab var{
+    margin-left: 10px;
+    color: #0064cb;
+    font-family: "Figtree";
+    font-style: normal;
+}
+
+/* Display Options Desktop, Tablet, Mobile */
+
+/* Mobile */
+@media only screen and (max-width:320px){
+
+  
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width:321px) and (max-width:768px){
+
+
+  }
+
+    /*Desktop*/
+    @media only screen and (min-width:769) and (max-width:1299px) {
+     
+    }
+  
+  /* LARGE Desktop*/
+  @media only screen and (min-width:1300px) and (max-width:2000px) {
+    .strengthscore-container{
+        left: 35%;
+    }
+ 
+  }
