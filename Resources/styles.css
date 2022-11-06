@@ -27,7 +27,7 @@
 /* About Section */
 
 #About {
-    background-image: url("file:///C:/Users/19032/Documents/GroupProject/WorkoutLog/Resources/images/whitebackground.png");
+    background-image: url("./images/whitebackground.png");
     background-size: cover;
     background-color: #ececec;
     position: absolute;
@@ -75,7 +75,7 @@
     right: 0px;
 }
 
-/* Graph Section */
+/* Graph Section Container */
 
 #GraphSection {
     background-color: #2d2e3b;
@@ -83,7 +83,7 @@
     width: 100%;
     top: 620px;
     right: 0px;
-    height: 1000px;
+    height: 1500px;
 }
 
 /* Progress Graph Section */
@@ -111,4 +111,32 @@
     left: 28%;
     width: 50%;
     top: 50px;
+}
+
+/* Strength Vs Average Graph Section */
+
+.strengthvsaverage-content{
+    position: relative;
+    top: 50px;
+}
+
+.strengthvsaverage-content h1{
+    font-family: "Figtree";
+    font-weight: bold;
+    color: #5bacff;
+    text-align: center;
+}
+
+.strengthvsaverage-content p{
+    font-family: "Figtree";
+    color: #eaebed;
+    text-align: center;
+}
+
+.strengthvsaverage-container{
+    position: relative;
+    left: 28%;
+    top: 50px;
+    width: 50%;
+
 }
