@@ -208,6 +208,36 @@
     font-style: normal;
 }
 
+
+/* Button Section */
+#button-container{
+    background-color: #2d2e3b;
+    position: absolute;
+    width: 100%;
+    top: 2000px;
+    right: 0;
+}
+
+button{
+    position: relative;
+    left: 550px;
+    font-family: "Figtree";
+    font-weight: bold;
+    width:200px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #5bacff;
+    border: 1px solid white;
+    color: #ffffff;
+}
+
+button:hover{
+    background-color: #ffffff;
+    border: 1px solid #5bacff;
+    color: #5bacff;
+
+}
+
 /* Display Options Desktop, Tablet, Mobile */
 
 /* Mobile */
