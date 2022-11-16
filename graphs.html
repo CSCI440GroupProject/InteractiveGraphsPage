@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="./Resources/Graphscript.js"></script>
   </head>
   <body>
     <!-- Header Section -->
     <section id="header">
       <h1 id="nav-header">Fitness Website</h1>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><img class="icon-img" src="./Resources/icon.png" alt="log out icon"></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="http://csci440.com/HomePage.html">Log out</a>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
@@ -272,7 +279,7 @@
     <section id = button-container>
       <div class="button">
         <form action="http://csci440.com/LogWorkout.html">
-          <button type="submit">Log another workout!</button>
+          <button class="submit-button" type="submit">Log another workout!</button>
         </form>
       </div>
     </section>
