@@ -24,6 +24,52 @@
     padding-left: 10px;
 }
 
+
+
+/* Dropdown Img */
+.dropbtn {
+    background-color: #2d2e3b;
+    border: none;
+    cursor: pointer;
+  }
+
+.dropbtn img {
+    position: absolute;
+    top: 20%;
+    left: 95%;
+    width: 4%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content{
+    display: none;
+    position: absolute;
+    left: 95%;
+    top: 75px;
+    background-color: #2d2e3b;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    font-family: 'Figtree';
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #2596be;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+
 /* About Section */
 
 #About {
@@ -218,7 +264,7 @@
     right: 0;
 }
 
-button{
+.submit-button{
     position: relative;
     left: 550px;
     font-family: "Figtree";
@@ -231,7 +277,7 @@ button{
     color: #ffffff;
 }
 
-button:hover{
+.submit-button:hover{
     background-color: #ffffff;
     border: 1px solid #5bacff;
     color: #5bacff;
@@ -249,7 +295,6 @@ button:hover{
   /* Tablet */
   @media only screen and (min-width:321px) and (max-width:768px){
 
-
   }
 
     /*Desktop*/
@@ -261,6 +306,12 @@ button:hover{
   @media only screen and (min-width:1300px) and (max-width:2000px) {
     .strengthscore-container{
         left: 35%;
+    }
+    #button-container{
+        top: 2300px;
+    }
+    .submit-button{
+        left: 850px;
     }
  
   }
